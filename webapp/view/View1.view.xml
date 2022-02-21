@@ -1,0 +1,22 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+controllerName="tcs.fin.payroll.controller.View1">
+    <Page title="View 1">
+        <headerContent>
+            <Button icon="sap-icon://action" press="onNext"></Button>
+        </headerContent>
+        <content>
+            <SearchField id="idSearch" search="onSearch"/>
+            <List id="idList" growing="true" growingThreshold="10" items="{/ProductSet}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
+                <items>
+                    <ObjectListItem title="{PRODUCT_ID}" intro="{CATEGORY}" 
+                    icon="{imageURL}"
+                                    number="{PRICE}" numberUnit="{CURRENCY_CODE}">
+                        <firstStatus>
+                            <ObjectStatus text="{NAME}"></ObjectStatus>
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
